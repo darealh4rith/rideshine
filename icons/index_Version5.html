@@ -7,12 +7,26 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#007bff">
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">RideShine</div>
+            <div class="logo">
+                <i class="fas fa-car-wash"></i>
+                RideShine
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Map</a>
+                <a href="#">My Bookings</a>
+            </div>
             <div id="weather-widget">
+                <i class="fas fa-cloud-sun"></i>
                 <span id="current-weather">Loading weather...</span>
                 <span id="temperature"></span>
             </div>
@@ -20,45 +34,117 @@
     </header>
 
     <main>
-        <section id="map-section">
-            <div id="map"></div>
+        <div class="stats-container">
+            <div class="stat-card">
+                <i class="fas fa-car"></i>
+                <h2>1500+</h2>
+                <p>Cars Washed</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-star"></i>
+                <h2>4.8</h2>
+                <p>Average Rating</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <h2>250</h2>
+                <p>Happy Customers</p>
+            </div>
+        </div>
+
+        <section class="upcoming-services">
+            <h2>Available Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3>Basic Wash</h3>
+                        <span class="price">$20</span>
+                    </div>
+                    <div class="service-location">
+                        <i class="fas fa-location-dot"></i>
+                        <span>Mobile Service Available</span>
+                    </div>
+                    <div class="service-time">
+                        <i class="far fa-clock"></i>
+                        <span>30 minutes</span>
+                    </div>
+                    <div class="service-members">
+                        <div class="member-avatars">
+                            <span class="rating">⭐ 4.8</span>
+                        </div>
+                    </div>
+                    <button class="book-now-btn">Book Now</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3>Deluxe Wash</h3>
+                        <span class="price">$35</span>
+                    </div>
+                    <div class="service-location">
+                        <i class="fas fa-location-dot"></i>
+                        <span>Mobile Service Available</span>
+                    </div>
+                    <div class="service-time">
+                        <i class="far fa-clock"></i>
+                        <span>1 hour</span>
+                    </div>
+                    <div class="service-members">
+                        <div class="member-avatars">
+                            <span class="rating">⭐ 4.9</span>
+                        </div>
+                    </div>
+                    <button class="book-now-btn">Book Now</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3>Premium Detail</h3>
+                        <span class="price">$50</span>
+                    </div>
+                    <div class="service-location">
+                        <i class="fas fa-location-dot"></i>
+                        <span>Mobile Service Available</span>
+                    </div>
+                    <div class="service-time">
+                        <i class="far fa-clock"></i>
+                        <span>2 hours</span>
+                    </div>
+                    <div class="service-members">
+                        <div class="member-avatars">
+                            <span class="rating">⭐ 5.0</span>
+                        </div>
+                    </div>
+                    <button class="book-now-btn">Book Now</button>
+                </div>
+            </div>
         </section>
 
-        <section id="booking-section">
-            <h2>Book Your Car Wash</h2>
-            <form id="booking-form">
-                <div class="form-group">
-                    <label for="service-type">Service Type</label>
-                    <select id="service-type" required>
-                        <option value="">Select a service</option>
-                        <option value="basic">Basic Wash ($20)</option>
-                        <option value="deluxe">Deluxe Wash ($35)</option>
-                        <option value="premium">Premium Detail ($50)</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="date">Preferred Date</label>
-                    <input type="date" id="date" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="time">Preferred Time</label>
-                    <input type="time" id="time" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="location">Your Location</label>
-                    <input type="text" id="location" placeholder="Enter your address" required>
-                </div>
-
-                <button type="submit">Book Now</button>
-            </form>
+        <section id="map-section">
+            <div id="map"></div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 RideShine. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>RideShine</h3>
+                <p>Premium mobile car wash services at your location</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@rideshine.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Load scripts -->
